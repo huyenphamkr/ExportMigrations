@@ -117,7 +117,8 @@ return new class extends Migration
             body += `$table->${TypeFormatName(row.typename)}` +
                 `('${row.name}'${TypeFormatNum(row.typenum)})` +
                 `${NullFormat(row.null)}${TimeStampFormat(row.typename, row.name)}` +
-                `->comment("${row.namejp}${NoteFormat(row.note)}");`;
+                `->comment("${row.namejp}${NoteFormat(row.note)}");
+                `;
         });
         var end = `
     }
