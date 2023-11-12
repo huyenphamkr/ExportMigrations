@@ -87,15 +87,14 @@
         </div>
     <script>
     var obj = arrName = arrJp = arrTypeNum = arrTypeName = arrNote = arrNull = [];
-    arrName = ConvertArray("ColName");
-    arrJp = ConvertArray("ColNameJp");
-    arrTypeName = ConvertTypeNumAndStr("ColType", 2);
-    arrTypeNum = ConvertTypeNumAndStr("ColType", 1);
-    arrNote = ConvertArray("ColNote");
-    arrNull = ConvertArray("ColNull");
-    obj = LoadArray();
-
     function load() {
+        arrName = ConvertArray("ColName");
+        arrJp = ConvertArray("ColNameJp");
+        arrTypeName = ConvertTypeNumAndStr("ColType", 2);
+        arrTypeNum = ConvertTypeNumAndStr("ColType", 1);
+        arrNote = ConvertArray("ColNote");
+        arrNull = ConvertArray("ColNull");
+        obj = LoadArray();
         filename = document.getElementById("name").value;
         var text = body = ``;
         var head = `<?php
