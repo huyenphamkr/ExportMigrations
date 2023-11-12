@@ -111,7 +111,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create(${filename}}, function (Blueprint $table) {
+        Schema::create('${filename}'), function (Blueprint $table) {
             `;
         obj.forEach((row, index) => {
             body += `$table->${TypeFormatName(row.typename)}` +
