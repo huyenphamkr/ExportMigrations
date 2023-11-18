@@ -109,9 +109,9 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('${filename}'), function (Blueprint $table) {
+        Schema::create('${filename}', function (Blueprint $table) {
             `;
         obj.forEach((row, index) => {
             body += `$table->${TypeFormatName(row.typename)}` +
@@ -121,14 +121,14 @@ return new class extends Migration
                 `;
         });
         var end = `
-    }
+    });
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('${filename}');
     }
